@@ -21,7 +21,7 @@
     top: 0;
     transition: left .1s, margin-left .3s, width .15s !important;
     margin-top: 48px;
-    background-color: var(--background-secondary-alt) !important;
+    background-color: var(--background-secondary);
 }
 .platform-win [class*="wrapper-"][class*="guilds-"] {
     top: 22px !important;
@@ -36,8 +36,7 @@
     margin-top: -48px;
     height: 48px;
     line-height: 48px;
-    background-color: var(--background-secondary-alt);
-    /* z-index: 100; */
+    background-color: var(--background-secondary);
     width: 240px;
     box-shadow: var(--elevation-low);
     padding-left: 60px;
@@ -46,7 +45,7 @@
     box-sizing: border-box;
     text-transform: capitalize;
     font-weight: 600;
-    color: var(--header-primary);
+    color: var(--text-normal);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,7 +72,7 @@
 
 [class*="wrapper-"][class*="guilds-"] [class*="scroller-"] {
     padding-top: 5px !important;
-    background-color: var(--background-secondary-alt) !important;
+    background-color: var(--background-secondary);
     display: flex;
     flex-direction: column;
     contain: unset !important;
@@ -236,7 +235,7 @@
     margin-left: 6.57px;
     padding-right: 10px;
     box-sizing: border-box;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-secondary);
     z-index: 2;
 }
 [class*="wrapper-"][class*="guilds-"] [class*="wrapper-"][data-folder-name]::after {
@@ -286,7 +285,7 @@
 
 [class*="listItemTooltip-"] {
     margin-left: -25px;
-    background-color: var(--background-secondary-alt) !important;
+    background-color: var(--rencord-accent) !important;
 }
 [class*="listItemTooltip-"] [class*="tooltipPointer-"] {
     display: none !important;
