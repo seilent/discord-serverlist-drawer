@@ -2,34 +2,44 @@
 
  * @name        Server-list Drawer
  * @author      Freeplay#5676
- * @version     1.0.4
+ * @version     1.0.5
  * @description A server-list drawer for Discord!
  * @authorId    158296466119458816
  * @source      https://github.com/Freeplayg/discord-serverlist-drawer
 
 **/
 
-/* 1.0.4
-- Fixed server labels not appearing until hover.
+/* 1.0.5
+- Fixed hover stuck when clicking home.
+- Added support for minimal mode.
  */
-
+ 
 [class*="wrapper-"][class*="guilds-"] {
     position: fixed;
     z-index: 20;
     left: -72px;
     bottom: 0;
     top: 0;
-    transition: left .1s, margin-left .3s, width .15s !important;
+    transition: left .2s, margin-left .3s, width .15s !important;
     margin-top: 48px;
     background-color: var(--background-secondary);
 }
+
+.platform-win .bd-minimal [class*="wrapper-"][class*="guilds-"] {
+    top: 16px !important;
+}
+
 .platform-win [class*="wrapper-"][class*="guilds-"] {
+    top: 22px !important;
+}
+.pill-3N7f9r {
     top: 22px !important;
 }
 .reduce-motion [class*="wrapper-"][class*="guilds-"],
 .reduce-motion [class*="wrapper-"][class*="guilds-"]::before {
     transition: opacity .1s !important;
 }
+
 [class*="wrapper-"][class*="guilds-"]::before {
     content: attr(aria-label);
     position: fixed;
@@ -50,10 +60,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    transition: left .1s, margin-left .3s, width .15s !important;
+    transition: left .2s, margin-left .3s, width .15s !important;
     left: -74px;
     width: 72px;
 }
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:hover, 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:focus, 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:focus-within {
+    left: 5px;
+    margin-left: -5px;
+    width: 200px;
+}
+
 [class*="wrapper-"][class*="guilds-"]:hover, 
 [class*="wrapper-"][class*="guilds-"]:focus, 
 [class*="wrapper-"][class*="guilds-"]:focus-within {
@@ -61,6 +80,16 @@
     margin-left: -5px;
     width: 240px;
 }
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:hover:before, 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:focus:before, 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:focus-within:before {
+    left: 5px;
+    margin-left: -5px;
+    width: 200px;
+    line-height: 48px;
+}
+
 [class*="wrapper-"][class*="guilds-"]:hover:before, 
 [class*="wrapper-"][class*="guilds-"]:focus:before, 
 [class*="wrapper-"][class*="guilds-"]:focus-within:before {
@@ -68,6 +97,20 @@
     margin-left: -5px;
     width: 240px;
     line-height: 48px;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:not(:hover), 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]:not(:hover):before {
+    transition: left .1s, margin-left .3s, width .15s !important;
+    left: -74px;
+    width: 72px;
+}
+
+[class*="wrapper-"][class*="guilds-"]:not(:hover), 
+[class*="wrapper-"][class*="guilds-"]:not(:hover):before {
+    transition: left .1s, margin-left .3s, width .15s !important;
+    left: -74px;
+    width: 72px;
 }
 
 [class*="wrapper-"][class*="guilds-"] [class*="scroller-"] {
@@ -242,11 +285,15 @@
     content: attr(data-folder-name);
 }
 
-
 [class*="wrapper-"][class*="guilds-"] [class*="expandedFolderBackground-"], [class*="guilds-"] [class*="folder-"] {
     background-color: var(--background-primary);
-    border-radius: 15px;
+    border-radius: 10px;
+    
 }
+.bd-minimal [class*="expandedFolderBackground-"] {
+    margin-left: 2px;
+}
+
 
 [class*="wrapper-"][class*="guilds-"] [class*="guildSeparator-"] {
     width: 100%;
@@ -280,13 +327,14 @@
     position: relative;
     margin-left: 14px;
     margin-bottom: -1px;
-    /* left: 100%; */
 }
 
 [class*="listItemTooltip-"] {
     margin-left: -25px;
-    background-color: var(--rencord-accent) !important;
+    background-color: var(--nightcord-accent) !important; 
+    transition: opacity .5s .8s;
 }
+
 [class*="listItemTooltip-"] [class*="tooltipPointer-"] {
     display: none !important;
 }
