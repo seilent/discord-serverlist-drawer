@@ -358,19 +358,38 @@
     padding-left: 16px !important;
 }
 
+.blobContainer-pmnxKB [class*="wrapper"]{
+    padding-right:240px;
+    margin-right:-240px;   
+}
+
 .bd-minimal .blobContainer-pmnxKB [class*="wrapper"]{
     padding-right:200px;
     margin-right:-200px;   
+}
+
+.blobContainer-pmnxKB foreignObject {
+    width: 300px !important;
 }
 
 .bd-minimal .blobContainer-pmnxKB foreignObject {
     width: 250px !important;
 }
 
+.folderIconWrapper-1_bOZe {
+    padding-right:240px;
+    margin-right:-240px;   
+    background-color: transparent !important;
+}
+
 .bd-minimal .folderIconWrapper-1_bOZe {
     padding-right:200px;
     margin-right:-200px;   
     background-color: transparent !important;
+}
+
+.wrapper-3Njo_c .listItem-GuPuDH svg foreignObject {
+    width: 300px !important; 
 }
 
 .bd-minimal .wrapper-3Njo_c .listItem-GuPuDH svg foreignObject {
