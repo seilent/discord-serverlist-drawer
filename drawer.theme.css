@@ -45,6 +45,10 @@
     transition: opacity .1s !important;
 }
 
+.bd-minimal [class*="wrapper-"][class*="guilds-"]::before {
+    width: 200px;
+}
+
 [class*="wrapper-"][class*="guilds-"]::before {
     content: "Nightcord";
     position: fixed;
