@@ -46,7 +46,7 @@
 }
 
 [class*="wrapper-"][class*="guilds-"]::before {
-    content: attr(aria-label);
+    content: "Nightcord";
     position: fixed;
     margin-top: -48px;
     height: 48px;
