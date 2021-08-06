@@ -199,24 +199,32 @@
 [class*="wrapper-"][class*="guilds-"] .mentioned:not(.selected)::before,
 [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
-    content: "";
-    transform: scale(0);
+    content: ""; 
     position: fixed;
-    top: 25px;
-    left: 35px;
-    width: 13px;
-    height: 13px;
+    top: 35px;
+    left: 24.8px;
+    width: 10px;
+    height: 10px;
     background-color: white;
-    border-radius: 100%;
-    border: 2px solid var(--background-secondary);
+    border-radius: 0%;
+    border: 1px solid var(--background-secondary);
     z-index: 101;
     pointer-events: none;
-    transition: transform .1s;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
-[class*="wrapper-"][class*="guilds-"]:not(:hover) [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
-    transform: scale(1);
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
+
 [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
     background-color: rgb(240, 71, 71) !important;
