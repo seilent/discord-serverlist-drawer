@@ -2,7 +2,7 @@
 
  * @name        Server-list Drawer
  * @author      Freeplay#5676
- * @version     1.0.5
+ * @version     1.0.6
  * @description A server-list drawer for Discord!
  * @authorId    158296466119458816
  * @source      https://github.com/Freeplayg/discord-serverlist-drawer
@@ -14,8 +14,12 @@
 - Added support for minimal mode.
 - Make text clickable.
  */
+
+ /* 1.0.6
+- Fixed notification
+ */
  
-[class*="wrapper-"][class*="guilds-"] {
+ [class*="wrapper-"][class*="guilds-"] {
     position: fixed;
     z-index: 20;
     left: -72px;
@@ -187,11 +191,13 @@
     justify-content: flex-start;
 }
 /* Attempt at an unread messages indicator. */
+[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"] {
     transform: unset !important;
 }
 [class*="wrapper-"][class*="guilds-"] .unread:not(.selected)::before,
 [class*="wrapper-"][class*="guilds-"] .mentioned:not(.selected)::before,
+[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
     content: "";
     transform: scale(0);
@@ -207,18 +213,15 @@
     pointer-events: none;
     transition: transform .1s;
 }
-[class*="wrapper-"][class*="guilds-"]:not(:hover) .unread:not(.selected)::before,
-[class*="wrapper-"][class*="guilds-"]:not(:hover) .mentioned:not(.selected)::before,
+[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"]:not(:hover) [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
     transform: scale(1);
 }
-[class*="wrapper-"][class*="guilds-"] .mentioned:not(.selected)::before,
+[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
     background-color: rgb(240, 71, 71) !important;
     z-index: 102;
 }
-
-
 
 [class*="wrapper-"][class*="guilds-"] [class*="listItem-"] [class*="childWrapper-"] {
     border-radius: 15px !important;
@@ -396,3 +399,10 @@
     width: 250px !important; 
 }
 
+[class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge .lowerBadge-29hYVK {
+    margin-right: 191px;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge .lowerBadge-29hYVK {
+    margin-right: 165px;
+}
