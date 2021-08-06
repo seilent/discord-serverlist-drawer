@@ -12,6 +12,7 @@
 /* 1.0.5
 - Fixed hover stuck when clicking home.
 - Added support for minimal mode.
+- Make text clickable.
  */
  
 [class*="wrapper-"][class*="guilds-"] {
