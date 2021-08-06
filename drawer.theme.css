@@ -395,3 +395,21 @@
 .bd-minimal .wrapper-3Njo_c .listItem-GuPuDH svg foreignObject {
     width: 250px !important; 
 }
+
+.listItemWrapper-KhRmzM [class*="wrapper"]{
+    padding-right:240px;
+    margin-right:-240px;   
+}
+
+.bd-minimal .listItemWrapper-KhRmzM [class*="wrapper"]{
+    padding-right:200px;
+    margin-right:-200px;   
+}
+
+.listItemWrapper-KhRmzM foreignObject{
+    width: 300px !important; 
+}
+
+.bd-minimal .listItemWrapper-KhRmzM foreignObject{
+    width: 250px !important; 
+}
