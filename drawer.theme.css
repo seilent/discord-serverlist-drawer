@@ -195,13 +195,12 @@
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"] {
     transform: unset !important;
 }
-[class*="wrapper-"][class*="guilds-"] .unread:not(.selected)::before,
-[class*="wrapper-"][class*="guilds-"] .mentioned:not(.selected)::before,
+
 [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
     content: ""; 
     position: fixed;
-    top: 35px;
+    top: 41px;
     left: 24.8px;
     width: 10px;
     height: 10px;
@@ -214,6 +213,14 @@
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
+.bd-minimal [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
+    top: 35px;
+    left: 24.8px;
+    width: 10px;
+    height: 10px;
 }
 
 @keyframes spin {
