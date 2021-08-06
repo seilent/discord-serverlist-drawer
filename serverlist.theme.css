@@ -331,7 +331,7 @@
 
 [class*="listItemTooltip-"] {
     margin-left: -25px;
-    background-color: var(--nightcord-accent) !important; 
+    background-color: var(--background-secondary) !important; 
     transition: opacity .5s .8s;
 }
 
@@ -355,4 +355,13 @@
 [class*="notice-"] + [class*="content-"] .searchBar-6Kv8R2, 
 [class*="notice-"] + [class*="content-"] [class*="discoverHeader"] {
     padding-left: 16px !important;
+}
+
+.bd-minimal .blobContainer-pmnxKB [class*="wrapper"]{
+    padding-right:200px;
+    margin-right:-200px;   
+}
+
+.bd-minimal .blobContainer-pmnxKB foreignObject {
+    width: 250px !important;
 }
