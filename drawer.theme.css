@@ -334,9 +334,7 @@
 }
 
 [class*="listItemTooltip-"] {
-    margin-left: -25px;
-    background-color: var(--background-secondary) !important; 
-    transition: opacity .5s .8s;
+    display:none;
 }
 
 [class*="listItemTooltip-"] [class*="tooltipPointer-"] {
