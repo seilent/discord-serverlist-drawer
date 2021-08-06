@@ -366,3 +366,13 @@
 .bd-minimal .blobContainer-pmnxKB foreignObject {
     width: 250px !important;
 }
+
+.bd-minimal .folderIconWrapper-1_bOZe {
+    padding-right:200px;
+    margin-right:-200px;   
+    background-color: transparent !important;
+}
+
+.bd-minimal .wrapper-3Njo_c .listItem-GuPuDH svg foreignObject {
+    width: 250px !important; 
+}
