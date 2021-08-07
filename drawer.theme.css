@@ -19,7 +19,7 @@
 - Fixed notification
  */
  
- [class*="wrapper-"][class*="guilds-"] {
+[class*="wrapper-"][class*="guilds-"] {
     position: fixed;
     z-index: 20;
     left: -72px;
@@ -28,6 +28,10 @@
     transition: left .2s, margin-left .3s, width .15s !important;
     margin-top: 48px;
     background-color: var(--background-secondary);
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"] {
+    margin-top: 46px;
 }
 
 .platform-win .bd-minimal [class*="wrapper-"][class*="guilds-"] {
@@ -47,6 +51,12 @@
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"]::before {
     width: 200px;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"]::before {
+    margin-top: -46px;
+    height: 46px;
+    line-height: 46px;
 }
 
 [class*="wrapper-"][class*="guilds-"]::before {
