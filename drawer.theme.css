@@ -88,6 +88,7 @@
     left: 5px;
     margin-left: -5px;
     width: 240px;
+    transition-delay:0.01s;
 }
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"]:hover:before, 
@@ -106,6 +107,7 @@
     margin-left: -5px;
     width: 240px;
     line-height: 48px;
+    transition-delay:0.01s;
 }
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"]:not(:hover), 
