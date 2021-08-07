@@ -233,7 +233,7 @@
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge::before,
 .bd-minimal [class*="wrapper-"][class*="guilds-"] [class*="tutorialContainer-"] + div[style*="transform: scale(1);"]::before {
-    top: 35px;
+    top: 33px;
     left: 24.8px;
     width: 10px;
     height: 10px;
