@@ -441,6 +441,9 @@
     transform: scale(0.75);
     margin-bottom: -2px;
     margin-right: -2px;
+    box-shadow: -3px    0 0 var(--background-secondary), 
+                   0 -3px 0 var(--background-secondary),
+                -3px -3px 0 var(--background-secondary);
 }
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"] [class*="wrapper"] foreignObject img {
