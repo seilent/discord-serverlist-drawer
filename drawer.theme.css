@@ -310,9 +310,9 @@
 
 [class*="wrapper-"][class*="guilds-"] [class*="expandedFolderBackground-"], [class*="guilds-"] [class*="folder-"] {
     background-color: var(--background-primary);
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
+
 .bd-minimal [class*="expandedFolderBackground-"] {
     margin-left: 2px;
 }
@@ -422,4 +422,20 @@
 
 .bd-minimal [class*="wrapper-"][class*="guilds-"] [aria-label] .bd-badge .lowerBadge-29hYVK {
     margin-right: 165px;
+}
+
+.bd-minimal .lowerBadge-29hYVK .numberBadge-2s8kKX {
+    border-radius: 0px; 
+    transform: scale(0.75);
+    margin-bottom: -2px;
+    margin-right: -2px;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"] [class*="wrapper"] foreignObject img {
+    border-radius: 0px;
+}
+
+.bd-minimal [class*="wrapper-"][class*="guilds-"] [class*="expandedFolderBackground-"], [class*="guilds-"] [class*="folder-"] {
+    background-color: var(--background-primary);
+    border-radius: 0px;   
 }
